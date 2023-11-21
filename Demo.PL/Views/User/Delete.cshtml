@@ -1,0 +1,35 @@
+﻿@model UserViewModel
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Are You Sure You Want To Delete @Model.Fname @Model.Lname </h1>
+<form asp-action="ConfirmDelete">
+    
+
+    <div class="form-group">
+        <label class="col-form-label" asp-for="Id"></label>
+        <input readonly class="form-control" asp-for="Id" />
+    </div>
+
+    <div class="form-group">
+        <label class="col-form-label" asp-for="Fname"></label>
+        <input readonly class="form-control" asp-for="Fname" />
+    </div>
+    <div class="form-group">
+        <label class="col-form-label" asp-for="Lname"></label>
+        <input readonly class="form-control" asp-for="Lname" />
+    </div>
+    <div class="form-group">
+        <label class="col-form-label" asp-for="PhoneNumber"></label>
+        <input readonly class="form-control" asp-for="PhoneNumber" />
+    </div>
+    <div class="form-group">
+        <label class="col-form-label" asp-for="Email"></label>
+        <input readonly class="form-control" asp-for="Email" />
+    </div>
+
+    <input type="submit" value="Delete" class="btn btn-danger" />
+    <a asp-action="Index" class="btn btn-light">Back To List</a>
+
+</form>
